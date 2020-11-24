@@ -1,0 +1,30 @@
+@mixin background($background) {
+  background: url($background);
+  background-size: 100% auto, cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin primary-container($padding, $margin) {
+  padding: $padding;
+  margin: $margin;
+  max-width: 1050px;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}

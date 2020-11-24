@@ -1,0 +1,50 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+html, body {
+  @include font-smoothing(on);
+  // removes blue border from buttons
+  overflow: hidden;
+  a:focus {
+    outline: 0;
+  }
+}
+
+// pseudo classes
+a {
+  &:link, &:visited, &:hover, &:active, &:focus {
+  }
+}
+
+// text groupings
+
+.text-group {
+  position: absolute; left: 50%; top: 50%; // centre the content in the parallax layers
+  width: 75%;
+}
+
+h1 {
+  @include transform(translate(-50%, -50%));
+  color: white;
+  font-family: 'sf pro bold', helvetica, sans-serif;
+  font-size: 5rem;
+  margin: 0; // overwrite default styles
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  @include transform(translate(-50%, -50%));
+  color: white;
+  font-family: 'sf pro regular', helvetica, sans-serif;
+  font-size: 2rem;
+  margin: 0; // overwrite default styles
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}

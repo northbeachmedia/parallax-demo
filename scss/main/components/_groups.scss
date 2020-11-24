@@ -1,0 +1,48 @@
+#group1 {
+  z-index: 5; // slide over group 2
+}
+#group1 .parallax__layer--base {
+  background-image: linear-gradient(to bottom right, $primary-color, lighten($primary-color, 15%));
+}
+
+#group2 {
+  z-index: 3; // slide under groups 1 and 3
+}
+#group2 .parallax__layer--back {
+  @include background("../img/img1.jpg");
+}
+
+#group3 {
+  z-index: 4; // slide over group 2 and 4
+}
+#group3 .parallax__layer--base {
+  background-image: linear-gradient(to bottom right, $secondary-color, lighten($secondary-color, 15%));
+}
+
+#group4 {
+  z-index: 2; // slide under group 3 and 5
+}
+#group4 .parallax__layer--deep {
+  @include background("../img/img2.jpg");
+}
+
+#group5 {
+  z-index: 3; // slide over group 4 and 6
+}
+#group5 .parallax__layer--base {
+  background-image: linear-gradient(to bottom right, $tertiary-color, lighten($tertiary-color, 15%));
+}
+
+#group6 {
+  z-index: 2; // slide under group 5 and 7
+}
+#group6 .parallax__layer--back {
+  @include background("../img/img3.jpg");
+}
+
+#group7 {
+  z-index: 3; // slide over group 7
+}
+#group7 .parallax__layer--base {
+  background-image: linear-gradient(to bottom right, $quaternary-color, lighten($quaternary-color, 15%));
+}
