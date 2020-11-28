@@ -10,6 +10,7 @@
 }
 #group2 .parallax__layer--back {
   @include background("../img/img1.jpg");
+  border: 4px dashed red;
 }
 
 #group3 {

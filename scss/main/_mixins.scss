@@ -15,6 +15,10 @@
     -moz-osx-font-smoothing: auto;
   }
 }
+@mixin perspective($perspective) {
+  -webkit-perspective: $perspective;
+  perspective: $perspective;
+}
 
 @mixin primary-container($padding, $margin) {
   padding: $padding;
@@ -27,4 +31,9 @@
   -moz-transform: $transform;
   -o-transform: $transform;
   transform: $transform;
+}
+
+@mixin transform-style($transform-style) {
+  -webkit-transform-style: $transform-style;
+  transform-style: $transform-style;
 }

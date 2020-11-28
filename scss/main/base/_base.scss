@@ -18,7 +18,7 @@ a {
   }
 }
 
-// text groupings
+// text groupings and styles
 
 .text-group {
   position: absolute; left: 50%; top: 50%; // centre the content in the parallax layers
@@ -27,7 +27,6 @@ a {
 
 h1 {
   @include transform(translate(-50%, -50%));
-  color: white;
   font-family: 'sf pro bold', helvetica, sans-serif;
   font-size: 5rem;
   margin: 0; // overwrite default styles
@@ -35,16 +34,25 @@ h1 {
   @media (max-width: 768px) {
     font-size: 3rem;
   }
+  a {
+    &:link, &:visited, &:active, &:focus {
+      color: white;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
-h2 {
-  @include transform(translate(-50%, -50%));
-  color: white;
-  font-family: 'sf pro regular', helvetica, sans-serif;
-  font-size: 2rem;
-  margin: 0; // overwrite default styles
-  text-align: center;
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
+#group1, #group3, #group5, #group7 {
+  h1 {
+    color: white;
+  }
+}
+
+#group2, #group4, #group6 {
+  h1 {
+    color: white;
+    text-shadow: .05em .05em 0 rgba(0, 0, 0, 0.20);
   }
 }
