@@ -11,9 +11,6 @@
   height: 500px; // fallback for older browsers
   height: 100vh;
   position: relative;
-  @media (max-width: 425px) {
-    height: 75vh;
-  }
 }
 
 .parallax__layer {
